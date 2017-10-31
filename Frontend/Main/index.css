@@ -1,0 +1,135 @@
+.main_heading
+{
+	font-size:30px;
+	font-family: "Abril fatface";
+	color: #040443;
+
+}
+
+.page_photo1
+{
+	margin:50px 11%;
+	max-width: 500px;
+	width:78%;
+}
+
+.login_heading
+{
+	font-weight: bold;
+	letter-spacing: 0.5em;
+	color: #b5ff2b;
+}
+/*html { */
+  /*background: url(http://www.puyrondcamping.com/wp-content/uploads/2014/12/ladybird-webpage-background.jpg) no-repeat center center fixed; */
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover;*/
+/*}*/
+
+.small_line
+{
+	font-size:20px;
+	margin:auto;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	width:80%;
+
+}
+.top_head_style
+{
+	/*height:20%;*/
+	top:0;
+	z-index: 1;
+	position:fixed;
+	width:100%;
+	padding-left:20px;
+	background: #e7e7e7;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius:20px;
+}
+
+.form-labels
+{
+	letter-spacing: 0.2rem;
+	word-spacing: 0.5rem;
+}
+
+.main_heading_image
+{
+	height:100px;
+	padding-bottom: 20px;
+}
+
+.main
+
+{
+	font-family:source sans pro;
+	/*background:url(http://www.puyrondcamping.com/wp-content/uploads/2014/12/ladybird-webpage-background.jpg);*/
+	/*background: url(http://www.puyrondcamping.com/wp-content/uploads/2014/12/ladybird-webpage-background.jpg) no-repeat center center fixed; */
+	/*-webkit-background-size: cover;*/
+	/*-moz-background-size: cover;*/
+	/*-o-background-size: cover;*/
+  	/*background-size: cover;*/
+	padding-top: 120px;
+	background: #ffffff;
+
+	
+
+}
+.main_cointainer
+{
+	position:relative;
+
+	height:100%;
+
+}
+
+.form_font
+{
+	color: #040443;
+}
+.contain_form
+{
+	margin:70px 12%;
+	min-width:220px;
+	width:60%;
+	align-content: center ;
+	/*border:5px solid green;*/
+	border-radius: 20px;
+	padding:30px 30px 30px 30px;
+	background: rgba(37, 93, 255,0.4);
+	
+	background:cover;
+}
+
+.form-group-members:hover
+{
+	border:1px solid #6714ff;
+}
+
+
+.Bottom
+{
+	background: rgba(37, 93, 255,1);
+	padding-left: 10px;
+	position:fixed;
+	width:100%;
+	left:0;
+	font-size:15px;
+	bottom:0;
+	z-index: 500;
+}
+
+
+.middle
+{
+	height: auto;
+	width:100%
+	position:relative;
+}
+
+.col-sm-6
+{
+	text-align: center;
+}
