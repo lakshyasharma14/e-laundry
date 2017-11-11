@@ -9,7 +9,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="index.css">
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
 	<title>E-laundry Login</title>
@@ -29,7 +29,7 @@
 		</div>
 		<div class="middle">
             <div class="container">
-                <div class="row">
+                <div class="row" style="border-left:2px solid black; border-right: 2px solid black;">
                     <div class="col-sm-6">
                         <img src="index/mainlogo.png" class="page_photo1" alt="">
                         <p class="small_line">Your one Stop Destination for laundry Service In TU</p>
@@ -47,16 +47,16 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1" class="form-labels">Password</label>
-                                <input type="password" name="password" class="form-control form-group-members" id="exampleInputPassword1" placeholder="Password" required="" pattern="[0-9a-zA-Z]{6,10}">
+                                <input type="password" name="password" class="form-control form-group-members" id="exampleInputPassword1" placeholder="Password" required="" pattern="[0-9a-zA-Z]{6,50}">
                             </div>
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" id="remeberme">Remember Me
                                 </label>
                             </div>
-                            <p class="form-control">Not a user? <a href="register.jsp">Sign Up</a></p>
+                            <p class=""><a href="register.jsp" class="btn btn-default">Sign Up</a></p>
 
-                            <button type="submit" class="btn btn-default">Login</button>
+                            <button type="submit" class="btn btn-default btn-lg">Login</button>
                         </form>
       
                  

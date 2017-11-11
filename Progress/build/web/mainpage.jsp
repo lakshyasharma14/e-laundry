@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+<%@page language="java" import="java.sql.*" contentType="text/html" pageEncoding="UTF-8"%>
 <% response.setHeader("Cache-Control","no-cache");
   response.setHeader("Cache-Control","no-store");
   response.setHeader("Pragma","no-cache");
   response.setDateHeader ("Expires", 0);
     if ((session.getAttribute("roll_no.") == null) || (session.getAttribute("roll_no.") == "")) {
 %>
-You are not logged in<br/>
-<a href="index.jsp">Please Login</a>
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+<h3>You are not logged in</h3><br/>
+<a href="index.jsp" class="btn btn-lg btn-default">Please Login</a>
 <%}
     else
         {
@@ -34,17 +36,26 @@ You are not logged in<br/>
 		</p>
 	</div>
          <div class="logout">
-             <a href="logout.jsp">Log Out</a>
+             <%
+                    Class.forName("com.mysql.jdbc.Driver");
+                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost/laundry shop","root","");
+                    Statement s=con.createStatement();
+                    ResultSet rs=s.executeQuery("Select Name from user where Roll_No=\""+session.getAttribute("roll_no.")+"\"");
+                    rs.next();
+                    String str=rs.getString(1); %>
+                    <span style="font-size:20px; padding-right:20px;">Welcome <% out.println(str); %></span>
+             <a href="logout.jsp" class="btn btn-lg btn-default">Log Out</a>
          </div>
 	<div class="middle">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3 col-xs-6 exstylegrid current-selection"><a href="mainpage.html" class="main-link">New Orders</a></div>
-				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="oldorders.html" class="main-link">Old Orders</a></div>
-				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="info.html" class="main-link">User Info</a></div>
-				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="pickdel.html" class="main-link">Pickup/Dekivery Details</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid current-selection"><a href="mainpage.jsp" class="main-link">New Orders</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="oldorders.jsp" class="main-link">Old Orders</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="info.jsp" class="main-link">User Info</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="pickdel.jsp" class="main-link">Pickup/Delivery Details</a></div>
 			</div>
 		</div>
+                
 	</div>
 
 	<div class="Bottom">

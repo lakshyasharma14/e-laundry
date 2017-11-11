@@ -1,6 +1,6 @@
 .main_heading
 {
-	font-size:6vw;
+	font-size:25px;
 	font-family: "Abril fatface";
 	color: #040443;
          text-align:justify;
@@ -99,8 +99,8 @@
 .contain_form
 {
 	margin:70px 20%;
-	min-width:220px;
 	width:60%;
+        min-width: 150px;
 	align-content: center ;
 	/*border:5px solid green;*/
 	border-radius: 20px;

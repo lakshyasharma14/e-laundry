@@ -49,10 +49,10 @@
 	<div class="middle">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3 col-xs-6 exstylegrid current-selection"><a href="mainpage.jsp" class="main-link">New Orders</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="mainpage.jsp" class="main-link">New Orders</a></div>
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="oldorders.jsp" class="main-link">Old Orders</a></div>
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="info.jsp" class="main-link">User Info</a></div>
-				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="pickdel.jsp" class="main-link">Pickup/Delivery Details</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid current-selection"><a href="pickdel.jsp" class="main-link">Pickup/Delivery Details</a></div>
 			</div>
 		</div>
                 

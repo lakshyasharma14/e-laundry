@@ -7,15 +7,23 @@ Statement s=con.createStatement();
 String p1=request.getParameter("Password");
 String p2=request.getParameter("RPassword");
 if(p1.equals(p2)){
-s.execute("insert into user values ("+request.getParameter("Roll_No.")+",'"+request.getParameter("Username")+"','"+request.getParameter("Email")+"',"+request.getParameter("Mobile")+",'"+request.getParameter("Hostel")+"','"+request.getParameter("Room_No.")+"')");
-response.sendRedirect("index.jsp");}
+    try{
+        s.execute("insert into user values ("+request.getParameter("Roll_No.")+",'"+request.getParameter("Username")+"','"+request.getParameter("Email")+"',"+request.getParameter("Mobile")+",'"+request.getParameter("Hostel")+"','"+request.getParameter("Room_No.")+"',SYSDATE())");
+        s.execute("insert into login values ("+request.getParameter("Roll_No.")+","+p1+",'Y')");
+        response.sendRedirect("index.jsp");
+
+    }catch(Exception e)
+    {
+      response.sendRedirect("regfail.jsp");
+    }
+}
 else
     {
 
 %>
-<dialog open>Passwords do not match please try again</dialog>
-<p></p>
-<a href="register.jsp">Sign Up</a>
+<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+<h2>Passwords do not match please try again</h2>
+<a href="register.jsp" class="btn btn-default btn-lg">Sign Up</a>
 <%
 }
 %>

@@ -22,7 +22,7 @@
     </div>
     <div class="middle">
         <div class="container">
-            <div class="row">
+            <div class="row" style="border-left:2px solid black; border-right: 2px solid black;">
                 <div class="col-sm-6">
                     <img src="index/mainlogo.png" class="page_photo1" alt="">
                     <p class="small_line">Your one Stop Destination for laundry Service In TU</p>
@@ -81,16 +81,16 @@
                             </select>
                             <div class="form-group">
                                 <label for="userRoomno" class="form-group">Room Number</label>
-                                <input type="text" class="form-control form-group-members" id="userRoomno" name="Room_No."placeholder="Room Number" required>
+                                <input type="text" class="form-control form-group-members" id="userRoomno" name="Room_No."placeholder="Room Number" required maxlengtht="10">
                             </div>
                         </div>
                         
                         <div class="form-group">
                             <label for="userClass"></label>
                         </div>
-                        <p class="form-control">Already a user? <a href="index.jsp">Login</a></p>
+                        <p class=""><a href="index.jsp" class="btn btn-default">Login</a></p>
 
-                        <button type="submit" class="btn btn-default">Sign Up</button>
+                        <button type="submit" class="btn btn-default btn-lg">Sign Up</button>
                     </form>
                 </div>
             </div>
