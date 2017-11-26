@@ -5,7 +5,7 @@ Connection con=DriverManager.getConnection("jdbc:mysql://localhost/laundry shop"
 Statement s=con.createStatement();
 ResultSet rs;
 String r=request.getParameter("roll_no.");
-rs=s.executeQuery("select Roll_No from login where Roll_No="+request.getParameter("roll_no.") +" and Password='"+request.getParameter("password")+"'");
+rs=s.executeQuery("select isAdmin from login where Roll_No="+request.getParameter("roll_no.") +" and Password='"+request.getParameter("password")+"'");
 if(rs.next()==true)
     {
        session.setAttribute("roll_no.",r);

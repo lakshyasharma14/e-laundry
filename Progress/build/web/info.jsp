@@ -23,7 +23,7 @@
         <style type="text/css">
             .jumbotron
             {
-                background:rgba(37,93,255,0.4);
+                background:rgba(255, 132, 0,0.4);
             }
             
             .jumbotron h1
@@ -62,7 +62,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="mainpage.jsp" class="main-link">New Orders</a></div>
-				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="oldorders.jsp" class="main-link">Old Orders</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="oldorders.jsp" class="main-link">Previous Orders</a></div>
 				<div class="col-sm-3 col-xs-6 exstylegrid current-selection"><a href="info.jsp" class="main-link">User Info</a></div>
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="pickdel.jsp" class="main-link">Pickup/Delivery Details</a></div>
 			</div>
@@ -75,6 +75,7 @@
                             <p>Contact No:<%out.println(rs.getString("Mobile_No"));%></p>
                             <p>Hostel:<%out.println(rs.getString("Hostel"));%></p>
                             <p>Room No:<%out.println(rs.getString("Room_no"));%></p>
+                            <a href="" class="btn btn-default">Change Password</a>
                         </div>
 		</div>
                 

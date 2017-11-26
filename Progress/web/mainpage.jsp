@@ -54,6 +54,56 @@
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="info.jsp" class="main-link">User Info</a></div>
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="pickdel.jsp" class="main-link">Pickup/Delivery Details</a></div>
 			</div>
+                        <hr>
+                        <div class="row exstylegrid2">
+                            <div class="col-sm-6">
+                                <form method="post" action="mainpage.jsp">
+                                    <%
+                                        rs=s.executeQuery("select *from department");
+                                    %>
+                                    <select name="dept" style="color:black;" onchange="submit()">
+                                        <option></option>
+                                        <%
+                                            while(rs.next())
+                                            {
+                                        %><option style="color:black;" value="<%out.println(rs.getString(1));%>"><%out.println(rs.getString(2));%></option>
+                                           <% }
+                                        %>
+                                    </select>
+                                </form>
+                                    <br>
+                                    <form method="post" action="addOrders.jsp">
+                                    <%
+                                        String opt=request.getParameter("dept");
+                                        if(opt==null)
+                                        {}
+                                        else
+                                        {
+                                            rs=s.executeQuery("select * from jobs where dept_id="+opt);
+                                            %><select name="job_id" style="color:black;">
+                                                <option></option>
+                                            <%
+                                            while(rs.next())
+                                            {
+                                                %><option style="color:black;" value="<%out.println(rs.getString(1));%>"><%out.println(rs.getString(2));%></option>
+                                            <%}
+                                            %></select>
+                                            <br>
+                                            <label for="rollNum" class="form-labels">Quantity</label>
+                                            <input type="text" name="qty" class="form-control form-group-members" id="rollNume" placeholder="Quantity" required="" pattern="[0-9]{1,2}" maxlength="2">
+                                            <br>
+                                            <button type="submit" class="btn btn-default btn-lg">Add to Bill</button>
+                                            <br>
+                                            <%
+                                        }
+                                    %>
+                                </form>
+                            </div>
+                            <div class="col-sm-6">
+                                <hr>
+                                <hr>
+                            </div>
+                        </div>
 		</div>
                 
 	</div>
