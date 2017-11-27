@@ -5,10 +5,12 @@ Connection con=DriverManager.getConnection("jdbc:mysql://localhost/laundry shop"
 Statement s=con.createStatement();
 ResultSet rs;
 String r=request.getParameter("roll_no.");
-rs=s.executeQuery("select Roll_No from login where Roll_No="+request.getParameter("roll_no.") +" and Password='"+request.getParameter("password")+"'");
+rs=s.executeQuery("select *from login where Roll_No="+request.getParameter("roll_no.") +" and Password='"+request.getParameter("password")+"'");
 if(rs.next()==true)
     {
        session.setAttribute("roll_no.",r);
+       if(request.getParameter("remme")=="" || request.getParameter("remme")==null || rs.getString("isAdmin").equals("Y"))
+       {session.setMaxInactiveInterval(30);}
        response.sendRedirect("mainpage.jsp");
     }
 else

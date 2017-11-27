@@ -29,14 +29,14 @@
 		</div>
 		<div class="middle">
             <div class="container">
-                <div class="row" style="border-left:2px solid black; border-right: 2px solid black;">
+                <div class="row">
                     <div class="col-sm-6">
                         <img src="index/mainlogo.png" class="page_photo1" alt="">
                         <p class="small_line">Your one Stop Destination for laundry Service In TU</p>
                     </div>
                     <div class="col-sm-6">
 
-                        <form class="contain_form form_font" action="checklogin.jsp">
+                        <form class="contain_form form_font" action="checklogin.jsp" method="post">
                             <h3 class="login_heading">Login</h3>
 
                             <hr>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" id="remeberme">Remember Me
+                                    <input type="checkbox" id="remeberme" name="remme">Remember Me
                                 </label>
                             </div>
                             <p class=""><a href="register.jsp" class="btn btn-default">Sign Up</a></p>

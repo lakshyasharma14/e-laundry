@@ -23,12 +23,18 @@
         <style type="text/css">
             .jumbotron
             {
-                background:rgba(37,93,255,0.4);
+                background:rgba(255, 132, 0,0.4);
             }
             
             .jumbotron h1
             {
                 font-weight: 700;
+                color:#040443;
+            }
+            .poit
+            {
+                padding-right:20px;
+                padding-left:20px;
                 color:#040443;
             }
         </style>
@@ -62,7 +68,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="mainpage.jsp" class="main-link">New Orders</a></div>
-				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="oldorders.jsp" class="main-link">Old Orders</a></div>
+				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="oldorders.jsp" class="main-link">Previous Orders</a></div>
 				<div class="col-sm-3 col-xs-6 exstylegrid current-selection"><a href="info.jsp" class="main-link">User Info</a></div>
 				<div class="col-sm-3 col-xs-6 exstylegrid hover-control"><a href="pickdel.jsp" class="main-link">Pickup/Delivery Details</a></div>
 			</div>
@@ -70,11 +76,41 @@
                         <div class="jumbotron">
                             <h1><%out.println(rs.getString("Name"));%></h1>
                             <hr>
-                            <p>Roll No:  <%out.println(rs.getString("Roll_no"));%></p>
-                            <p>Email   : <%out.println(rs.getString("Email"));%></p>
-                            <p>Contact No:<%out.println(rs.getString("Mobile_No"));%></p>
-                            <p>Hostel:<%out.println(rs.getString("Hostel"));%></p>
-                            <p>Room No:<%out.println(rs.getString("Room_no"));%></p>
+                            <table style="font-size:30px;">
+                                <thead>
+                                    <tr>
+                                        <th class="poit"></th>
+                                        <th class="poit"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="poit">Roll No</td>
+                                        <td class="poit"><%out.println(rs.getString("Roll_no"));%></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="poit">Email</td>
+                                        <td class="poit"><%out.println(rs.getString("Email"));%></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="poit">Contact No</td>
+                                        <td class="poit"><%out.println(rs.getString("Mobile_No"));%></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="poit">Hostel</td>
+                                        <td class="poit"><%out.println(rs.getString("Hostel"));%></td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="poit">Room No</td>
+                                        <td class="poit"><%out.println(rs.getString("Room_No"));%></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                                    <br>
+                            <a href="cPass.jsp" class="btn btn-default">Change Password</a>
                         </div>
 		</div>
                 
