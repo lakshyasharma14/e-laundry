@@ -20,7 +20,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Personal Details</title>
+	<title>New Orders</title>
         <style type="text/css">
             .jumbotron
             {
@@ -75,43 +75,24 @@
 			</div>
                     <hr>    
                         <div class="jumbotron">
-                            <h1><%out.println(rs.getString("Name"));%></h1>
+                            <h1>Change Password</h1>
                             <hr>
-                            <table style="font-size:30px;">
-                                <thead>
-                                    <tr>
-                                        <th class="poit"></th>
-                                        <th class="poit"></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="poit">Roll No</td>
-                                        <td class="poit"><%out.println(rs.getString("Roll_no"));%></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="poit">Email</td>
-                                        <td class="poit"><%out.println(rs.getString("Email"));%></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="poit">Contact No</td>
-                                        <td class="poit"><%out.println(rs.getString("Mobile_No"));%></td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td class="poit">Hostel</td>
-                                        <td class="poit"><%out.println(rs.getString("Hostel"));%></td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td class="poit">Room No</td>
-                                        <td class="poit"><%out.println(rs.getString("Room_No"));%></td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                                    <br>
-                            <a href="cPass.jsp" class="btn btn-default">Change Password</a>
+                            <form method="pull" action="changePassword.jsp">
+                                <div class="form-group">
+                                    <label for="rollNum" class="form-labels">Old Password</label>
+                                    <input type="password" name="oldP" class="form-control form-group-members" id="exampleInputPassword1" placeholder="Old Password" required="" pattern="[0-9a-zA-Z]{6,50}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="form-labels">New Password</label>
+                                    <input type="password" name="newP1" class="form-control form-group-members" id="exampleInputPassword1" placeholder="New Password" required="" pattern="[0-9a-zA-Z]{6,50}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword2" class="form-labels">Retype New Password</label>
+                                    <input type="password" name="newP2" class="form-control form-group-members" id="exampleInputPassword2" placeholder="Retype New Password" required="" pattern="[0-9a-zA-Z]{6,50}">
+                                </div>
+                                <button type="submit" class="btn btn-default">Change Password</button>
+                            </form>
+                            <br>
                         </div>
 		</div>
                 

@@ -8,6 +8,7 @@
     if ((session.getAttribute("roll_no.") == null) || (session.getAttribute("roll_no.") == "")) {
 %>
 <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <h3>You are not logged in</h3><br/>
 <a href="index.jsp" class="btn btn-lg btn-default">Please Login</a>
 <%} 

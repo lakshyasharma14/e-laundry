@@ -28,7 +28,12 @@ else
         
                 s4=rs.getString("Total_due");
             %>
-            
+            <!DOCTYPE HTML>
+            <html>
+                <head>
+                    <title>Bill Number:<%out.println(s3);%></title>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                </head>
             <h1 style="text-align: center;">Bill Number <%out.println(s3);%></h1>
             <table border="2" style="margin:20px auto;" class="tab">
                                     <thead>
@@ -82,6 +87,7 @@ else
                                     </tbody>
                                 </table>
                                         <a href="oldorders.jsp">Back</a>
+            </html>
         <%}
 else{
 response.sendRedirect("oldorders.jsp");

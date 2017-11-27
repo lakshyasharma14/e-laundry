@@ -19,7 +19,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-	<title>New Orders</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Previous Orders</title>
         <style type="text/css">
             .jumbotron
             {
@@ -75,7 +76,7 @@
                             <h1>Orders</h1>
                             <hr>
                             <% rs=s.executeQuery("select bill_no,Dos, Status,Total_due from services where roll_no="+session.getAttribute("roll_no."));%>
-                            <table  style="font-size:27.714px;color:#040443; margin:20px auto; text-align: center;" class="tab">
+                            <table  style="font-size:4vh;color:#040443; margin:20px auto; text-align: center;" class="tab">
                                 <thead>
                                     <th>Bill No</th>
                                     <th>Date of Sub</th>
@@ -103,7 +104,14 @@
 	</div>
 
 	<div class="Bottom">
-		<p>All Rights Reserved  R.S Dry Clean</p>
+		All Rights Reserved  R.S Dry Clean<%
+                rs=s.executeQuery("select Roll_no from login where isAdmin=\"Y\" and Roll_no="+session.getAttribute("roll_no."));
+                if(rs.next())
+                {
+                    %>
+                    <a href="admin.jsp" style="color:red; text-align: left;">Admin Mode</a>
+                <%}
+                %>
 	</div>
 </div>
 
