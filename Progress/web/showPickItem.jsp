@@ -28,6 +28,7 @@ else
         </head>
         <body style="padding:20px;"> 
             <% rs=s.executeQuery("select Roll_no,bill_no,Del_Date,Total_due from services where status='R' and Del_mode='Pickup'");%>
+            <h1 style="font-size: 60px; color:#040443; text-align: center;">Pickup List</h1>
                             <table  style="font-size:27.714px;color:#040443; margin:20px auto; text-align: center;" class="tab">
                                 <thead>
                                 <th>Roll No</th>

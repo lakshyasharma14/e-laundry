@@ -76,7 +76,7 @@
                             <h1>Orders</h1>
                             <hr>
                             <% rs=s.executeQuery("select bill_no,Dos, Status,Total_due from services where roll_no="+session.getAttribute("roll_no."));%>
-                            <table  style="font-size:4vh;color:#040443; margin:20px auto; text-align: center;" class="tab">
+                            <table  style="font-size:27px;color:#040443; margin:20px auto; text-align: center;" class="tab">
                                 <thead>
                                     <th>Bill No</th>
                                     <th>Date of Sub</th>

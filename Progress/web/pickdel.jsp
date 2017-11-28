@@ -76,7 +76,7 @@
                             <h1>Delivery Mode</h1>
                             <hr>
                             <% rs=s.executeQuery("select bill_no,Del_date, Status,coalesce(Del_mode,\"NA\") from services where Status=\"R\" and Roll_no="+session.getAttribute("roll_no."));%>
-                            <table style="font-size:4vh;color:#040443; margin:20px auto; text-align: center;" class="tab">
+                            <table style="font-size:27px;color:#040443; margin:20px auto; text-align: center;" class="tab">
                                 <thead>
                                     <th>Bill No</th>
                                     <th>Date of Del</th>
